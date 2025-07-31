@@ -1,0 +1,73 @@
+{
+  "user": {
+    "login": "testuser",
+    "id": 12345,
+    "type": "User"
+  },
+  "repositories": [
+    {
+      "name": "test-repo-1",
+      "fork": false,
+      "owner": {
+        "login": "testuser"
+      },
+      "description": "Test repository 1",
+      "language": "Java"
+    },
+    {
+      "name": "test-repo-2",
+      "fork": false,
+      "owner": {
+        "login": "testuser"
+      },
+      "description": "Test repository 2",
+      "language": "JavaScript"
+    },
+    {
+      "name": "forked-repo",
+      "fork": true,
+      "owner": {
+        "login": "testuser"
+      },
+      "description": "This is a fork",
+      "language": "Python"
+    }
+  ],
+  "branches": {
+    "test-repo-1": [
+      {
+        "name": "main",
+        "commit": {
+          "sha": "abc123def456789",
+          "url": "https://api.github.com/repos/testuser/test-repo-1/commits/abc123def456789"
+        }
+      },
+      {
+        "name": "develop",
+        "commit": {
+          "sha": "def456ghi789012",
+          "url": "https://api.github.com/repos/testuser/test-repo-1/commits/def456ghi789012"
+        }
+      }
+    ],
+    "test-repo-2": [
+      {
+        "name": "master",
+        "commit": {
+          "sha": "xyz789abc123456",
+          "url": "https://api.github.com/repos/testuser/test-repo-2/commits/xyz789abc123456"
+        }
+      }
+    ]
+  },
+  "error_responses": {
+    "user_not_found": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest"
+    },
+    "rate_limit": {
+      "message": "API rate limit exceeded",
+      "documentation_url": "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"
+    }
+  }
+} 
